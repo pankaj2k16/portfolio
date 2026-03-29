@@ -1,0 +1,53 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-surface: #f9f9fb;
+  --color-surface-container-low: #f3f3f5;
+  --color-surface-container: #eeeef0;
+  --color-surface-container-high: #e8e8ea;
+  --color-surface-container-highest: #e2e2e4;
+  --color-surface-container-lowest: #ffffff;
+  
+  --color-primary: #0058bc;
+  --color-primary-container: #0070eb;
+  --color-on-primary: #ffffff;
+  
+  --color-on-surface: #1a1c1d;
+  --color-on-surface-variant: #414755;
+  
+  --color-outline-variant: rgba(193, 198, 215, 0.15);
+  
+  --color-primary-fixed: #d8e2ff;
+  --color-on-primary-fixed: #001a41;
+  --color-primary-fixed-dim: #adc6ff;
+  
+  --color-secondary-container: #e2dfe1;
+  --color-on-secondary-container: #636264;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-surface text-on-surface font-sans antialiased;
+  }
+}
+
+@layer utilities {
+  .glass-nav {
+    @apply bg-surface/70 backdrop-blur-xl;
+  }
+  .text-display-lg {
+    @apply text-[3.5rem] leading-[1.1] tracking-tight font-extrabold;
+  }
+  .text-headline-lg {
+    @apply text-[2rem] leading-[1.2] font-bold;
+  }
+  .ghost-border {
+    @apply outline outline-1 outline-outline-variant;
+  }
+}
